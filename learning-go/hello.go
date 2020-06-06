@@ -5,6 +5,7 @@ import (
 	"os"
 	"reflect"
 	"runtime"
+	"time"
 )
 
 func main() {
@@ -61,7 +62,7 @@ func main() {
 		fmt.Println("wot")
 	}
 
-	//errors, gonna return "no such file or directory" if can't find
+	// errors, gonna return "no such file or directory" if can't find
 	_, err := os.Open("./test.txt")
 
 	if err != nil {
@@ -70,6 +71,26 @@ func main() {
 		fmt.Println("let's fucking gooooo")
 	}
 
+	// for loops <expression>
+	for i := 10; i >= 0; i-- {
+		if i == 0 {
+			fmt.Println("Boom!")
+			break
+		}
+		fmt.Println(i)
+		time.Sleep(1 * time.Second)
+	}
+
+	//for loop range
+	stuff := []string{"yes", "no", "maybe"}
+	otherStuff := []string{"aaa", "yes", "lemons"}
+	for _, i := range stuff {
+		for _, x := range otherStuff {
+			if i == x {
+				fmt.Println(x, "is", i)
+			}
+		}
+	}
 }
 
 // using pointers

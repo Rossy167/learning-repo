@@ -1,3 +1,4 @@
 .DS_Store
 *.txt
 flask\__pycache__
+*.pyc

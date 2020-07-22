@@ -1,4 +1,6 @@
 .DS_Store
 *.txt
-flask\__pycache__
+flask/__pycache__/*
 *.pyc
+flask/flask_env/*
+
